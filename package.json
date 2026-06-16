@@ -1,0 +1,27 @@
+{
+  "name": "landconnect",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:auth": "npm run dev --workspace=services/auth-service",
+    "dev:listing": "npm run dev --workspace=services/listing-service",
+    "dev:token": "npm run dev --workspace=services/token-service",
+    "dev:investment": "npm run dev --workspace=services/investment-service",
+    "dev:chat": "npm run dev --workspace=services/chat-service",
+    "dev:marketplace": "npm run dev --workspace=services/marketplace-service",
+    "dev:notification": "npm run dev --workspace=services/notification-service",
+    "dev:file": "npm run dev --workspace=services/file-service",
+    "dev:gateway": "npm run dev --workspace=services/api-gateway",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build:all": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
