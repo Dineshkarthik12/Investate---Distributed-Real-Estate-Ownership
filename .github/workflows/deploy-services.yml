@@ -34,7 +34,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   REGION: us-central1
   GAR_LOCATION: us-central1
-  REPOSITORY: Investate---Distributed-Real-Estate-Ownership
+  REPOSITORY: investate---distributed-real-estate-ownership
 
 jobs:
   prepare-matrix:
