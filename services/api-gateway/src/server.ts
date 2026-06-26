@@ -44,7 +44,7 @@ Object.entries(services).forEach(([path, target]) => {
     onProxyRes: (proxyRes) => {
         // Prevent 504 Gateway Timeout if service is down by handling errors
     },
-    onError: (err, req, res) => {
+    onError: (err: any, req: any, res: any) => {
       console.error(`Proxy error for ${path}:`, err);
       if (!res.headersSent) {
           (res as express.Response).status(502).json({ success: false, error: 'Bad Gateway' });
